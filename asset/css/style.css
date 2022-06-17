@@ -24,6 +24,10 @@
     transition: all .2s ease-out;
 }
 
+body{
+    overflow-x: hidden;
+
+}
 html{
     font-size:62.5% ;
     overflow-x: hidden;
@@ -33,7 +37,11 @@ html{
 
 section{
     padding:2rem 9%;
+ 
 
+}
+section:nth-last-child(even){
+margin-bottom: 50px;
 }
 
 section:nth-child(even){
@@ -53,9 +61,9 @@ section:nth-child(even){
     z-index: 1000;
     display: flex;
     align-items: center;
-    /* box-shadow: 0 .5rem 1.5rem rgba(0, 3, 40, 0.1); */
+    box-shadow: 0 .5rem 1.5rem rgba(0, 3, 40, 0.1);
     justify-content: space-between;
-    /* background-color: var(--blue); */
+background-color: #fff;
  
     
 }
@@ -66,14 +74,16 @@ section:nth-child(even){
     border:var(--border);
     display: inline-block;
     border-radius: .5rem;
-    /* box-shadow: var(--box-shadow); */
     color: #fff;
     cursor: pointer;
     text-decoration: none;
     font-size: 1.7rem;
-    /* border: 1px solid rgb(11, 167, 120); */
     background-color:var(--btnBg) ;
-  
+
+
+}
+a{
+    text-decoration: none;
 }
 
 .btn:hover{
@@ -87,7 +97,7 @@ section:nth-child(even){
     font-size: 2.5rem;
     color: var(--black);
 }
-.header,.navbar a{
+.navbar, a{
     font-size: 1.7rem;
     color:var(--light-color);
     margin-left: 2rem;
@@ -112,16 +122,25 @@ section:nth-child(even){
     align-items: center;
     flex-wrap:wrap ;
     padding-top: 10rem;
+    height: 100vh;
 
 }
 
 .home .homeimage{
     flex: 1 1 45rem;
+  height: 550px;
+
 }
+.homeimage img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 .home .homecontent{
     flex: 1 1 45rem;
 }
-.home .homecontent h3{
+ .homecontent h3{
     font-size: 4.5rem;
     color: var(--black);
     line-height: 3.7rem;
@@ -133,6 +152,7 @@ section:nth-child(even){
     color: var(--light-color);
     line-height: 1.8rem;
     padding:2rem 0;
+   
   
 }
 
@@ -251,20 +271,26 @@ section:nth-child(even){
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap:2rem ;
+    gap:5rem ;
+    
     
 }
 
-.about .aboutRow .image{
+.aboutRow .imag{
     flex: 1 1 45rem;
 
+    /* padding-right: 10px; */
+
 }
 
 
-.about .aboutRow .image img{
+ .imag img{
+    
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.about .aboutRow .content{
+ .aboutRow .content{
     flex: 1 1 45rem;
 
 }
@@ -276,7 +302,7 @@ section:nth-child(even){
   line-height: 3rem;
 }
 
-.about .aboutRow .content p{
+.aboutRow .content p{
     color: var(--light-color);
     padding:1rem 0 ;
     font-size: 1.5rem;
@@ -608,6 +634,7 @@ color: var(--light-color);
         font-size: 2rem;
         display: block;
         margin: 2.5rem;
+      
         
     } 
     
